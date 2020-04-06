@@ -32,7 +32,19 @@ _____________________________________________________
     <dt>Comments</dt>
     <dd>narrate codes</dd>
     <dd>not included in the executable applications</dd>
-    <dt> * Single-line comments</dt>
-    <dd>preceded by two forward slashes</dd>
-    <dd>'// Comments about the code structure go here'</dd>
+    <dl>
+        <dt> Single-line comments</dt>
+        <dd>preceded by two forward slashes</dd>
+        <dd>`// Comments about the code structure go here`</dd>
+        <dt>Multiple-line comments</dt>
+        <dd>begins with /* and end with */</dd>
+        <dd>maybe used for narrative paragraphs</dd>
+        <dd>`/* Information about the code structure belongs here */`</dd>
+        <dt>XML tag comments</dt>
+        <dd>precede by triple forward slashes</dd>
+        <dd>enables auto-generation of HTML documentation that is enabled in VS</dd>
+        <dd>enable tooltip hnts for describing code blocks</dd>
+        <dd>9 main comment tags: remarks, summary, example, exception, param, permission, returns, seealso, and include</dd>
+        <dd>` /// <summary>`</dd>
+    </dl>
 </dl>
