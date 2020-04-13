@@ -44,7 +44,7 @@ _____________________________________________________
     <dd>enables auto-generation of HTML documentation that is enabled in VS</dd>
     <dd>enable tooltip hnts for describing code blocks</dd>
     <dd>9 main comment tags: remarks, summary, example, exception, param, permission, returns, seealso, and include</dd>
-    `/// <summary>`
+    `/// < summary >`
     <dt>Syntax</dt>
     <dd>set of rules for structural correctness of a programming language</dd>
     <dt>Indentation</dt>
@@ -84,4 +84,44 @@ float cnTower = 553;                // Valid
 float empireStateBuilding = 443.1;  // Causes error
 float burjKalifa = 829.8f;          // Valid
 ```
+
+Notice that fractional numeric values require a suffix of `f` to distinguish them as float type. Whole numbers can be assigned to float types because float is large enough to store any valid whole numbers.
+
+```
+// Net Worth in US Dollars
+decimal amancioOrtega = 51700000000;        // Valid
+decimal ingvatKamprad = 39900000000.79m;    // Valid
+decimal leeShauKee = 22300000000.34;        // Causes error
+```
+
+Notice that whole number can be assigned to decimal variables because the decimal format is large enough to store any whole number. On the other hand, the format of a fraction value must be clarified with the numeriic literal `m` before the number can be assigned to a decimal variable.
+
+**Variable Types**
+
+<dl>
+    <dt>Value Type</dt>
+    <dd>store simple types that are predefined in the C# library, such as integer, float, and decimal types</dd>
+    <dd>reference a location in memory that stores the data</dd>
+    <dt>Reference Type</dt>
+    <dd>reference custom objects made using classes or collections of data</dd>
+    <dd>refer ti a location in memory that contains the starting address where the data is stored</dd>
+</dl>
+
+**Variable Syntax**
+
+Variables can be declared separately and then initialized later:
+```
+int totalOutlets; // Declare the variable
+totalOutlets = 4; // Initialize the variable
+```
+
+Variables can also be declared and initialized on the same line:
+`int totalOutlets = 4;`
+
+**Variable Names**
+
+Variable names are written in *camelCase*, meaning the first letter of the name is lowercase and then, after the first word, each consecutive word in the variable name begins with an uppercase letter.
+
+> **Note**
+Most C# developers use camelCaase names when the variable's access level is private or protected. With this same standard, if the variable access level is public, the variable name is wirtten in *PascalCase*, meaning each word in the name starts with an uppercase letter while all other letters are lowercase.
 
