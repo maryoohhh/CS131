@@ -75,7 +75,7 @@ This means that once a data structure s defined with a given data type, the stru
 
 ![Figure 2-1 Common Data Types](https://github.com/maryoohhh/CS131/blob/master/Figure2-1.png)
 
-Figure 2-1: Common Data Types
+*Figure 2-1: Common Data Types*
 
 **Numeric Lieterals**
 
@@ -170,7 +170,7 @@ Each value within the array is stored inside an *element* of the array. Elements
 
 ![Figure 2-2 Array address, indexes, and elements](https://github.com/maryoohhh/CS131/blob/master/Figure2-2.png)
 
-Figure 2-2: Array address, indexes, and elements
+*Figure 2-2: Array address, indexes, and elements*
 
 Three common ways to declare arrays are to state
 * Type, name, and array size together
@@ -219,7 +219,7 @@ Each array instance exposes a `Length` property to obtain the number of elements
 
  Single-dimensional arrays can be sorted with the `Sort()` method:
 
- `void Sort(arrayType[] array);
+ `void Sort(arrayType[] array);`
 
  Example
 
@@ -240,4 +240,68 @@ Each array instance exposes a `Length` property to obtain the number of elements
  ```
 
  **Multidimensional Arrays**
- 
+
+![Figure 2-3: Multidimensional array](https://github.com/maryoohhh/CS131/blob/master/Figure2-3.png)
+
+*Figure 2-3: Multidimensional array*
+
+**Multidimensional Array Syntax**
+
+`int[,] forecast = new int[NUM_DAYS, NUM_WEATHER_STATS];`
+
+To assign values to elements
+
+```
+forecast[WED, LOW] = 69;
+forecast[WED, HIGH] = 80;
+```
+
+**Multidimensional Array Length**
+
+`int GetLength(int dimension);`
+
+**Enumerations**
+
+An enumeration type defines a list of related constant values.
+
+**Enumerations Syntax**
+
+Enumeration types are defined using the `enum` keyword.
+
+`enum PlanetSize{Jupiter, Saturn, Uranus, Neptune, Earth, Venus, Mars, Mercury, Pluto};`
+
+Enumerator values can be assigned manually too.
+
+`enum PlanetDiameter { Jupiter=88800, Saturn=74900, Uranus=31763, Neptune=34500, Earth=7926, Venus=7500, Mercury=3030, Pluto=1480};`
+
+When you need to obtain a value associated with the enumerated item, a cast is required:
+
+`int JupiterSize = (int)PlanetDiameter.Jupiter;`
+
+**Enumeration Naming**
+
+Enumeration names are most commonly written using *PascalCase*.
+
+**Enumeration Methods**
+
+You can obtain the name of an enumerator with a cast using the enumeration type and the value of the enumerator.
+
+`enum {Jupiter, Saturn, Uranus, Neptune, Earth, Venus, Mars, Mercury, Pluto};`
+
+the enumerator name can be obtained using the enumerator's value:
+
+```
+Planet enumerator = (Planet)4;
+string name = enumerator.ToString();
+// Assign 'Earth'
+```
+
+**Determining the Enumerator Count**
+
+`GetNames()` methos requires the enumeration type as a parameter.
+
+`string[] planetNames = Enum.GetNames(typeof(Planet));`
+
+Once the enumerator names are stored in a string array, you can obtain their count by checking the `Lenght` property of the array:
+
+`int totalPlanet = planetNames.Length;`
