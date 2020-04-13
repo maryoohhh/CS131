@@ -125,3 +125,35 @@ Variable names are written in *camelCase*, meaning the first letter of the name 
 > **Note**
 Most C# developers use camelCaase names when the variable's access level is private or protected. With this same standard, if the variable access level is public, the variable name is wirtten in *PascalCase*, meaning each word in the name starts with an uppercase letter while all other letters are lowercase.
 
+**Constants**
+
+Constants are different from variables, though, because constant values cannot change after they are intialized. Since constant values are fixed, the constant reference prevents unwanted data tampering throughout the program. In addition, the constant's name provides a reader-friendly reference for the data value.
+
+**Constant Syntax**
+
+Declaration is preceded with the keyword `const`
+
+`const string FUN_FACT = "Facts about Venus";`
+
+**Consant Names**
+
+> Most C# developers write constant names entirely with uppercase letters.
+
+**Explicit Variable Conversion (Casting)**
+
+When working with nummeric values, if you need to assign a value from a variable with a type that has more storage space into a variable type with a similar format but less storage, you must perform a *cast*.
+
+```
+float distance = -386.8f;
+int distanceInMiles = (int)distance; // Stores -386
+```
+
+**Implicit Variable Conversion**
+
+When working with similar numeric data types, if you assign a value to a variable with a data type that has more storage space, then an implicit conversion occurs.
+
+```
+float distance = -67.7f;
+double distanceInMiles = distance; // Convers to -67.6999969482422
+```
+
