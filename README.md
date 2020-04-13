@@ -51,3 +51,37 @@ _____________________________________________________
     <dd>opening and closing curly braces are required to enclose structures such as classes, methods, and more</dd>
     <dd>for readability and by convection, it is essential to indent and left-align the code within each pair of curly braces, including structures inside structures</dd>
 </dl>
+
+## Chapter 2: Variables, Constants, Arrays, and Enumerations
+____________________________________________________________
+
+<dl>
+    <dt>Variables</dt>
+    <dd>uniquely named references to store data</dd>
+    <dd>values can change at run time</dd>
+    <dt>Constants</dt>
+    <dd>uniquely named references to values</dd>
+    <dd>values cannot change after they are assigned when the constants are declared</dd>
+    <dt>Arrays</dt>
+    <dd>store multiple values of the same data type</dd>
+    <dt>Enumerations</dt>
+    <dd>sets of named constants called *enumerators*</dd>
+    <dd>customizable type offers a reader-friendly reference to a group of constant values</dd>
+</dl>
+
+> C# is a stongly typed language.
+
+This means that once a data structure s defined with a given data type, the structure is unable to hold a value of different type.
+
+![Figure 2-1 Common Data Types](https://github.com/maryoohhh/CS131/blob/master/Figure2-1.png)
+Figure 2-1 Common Data Types
+
+**Numeric Lieterals**
+
+```
+// Height in Meters
+float cnTower = 553;                // Valid
+float empireStateBuilding = 443.1;  // Causes error
+float burjKalifa = 829.8f;          // Valid
+```
+
