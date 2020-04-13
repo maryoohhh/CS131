@@ -73,7 +73,7 @@ ____________________________________________________________
 
 This means that once a data structure s defined with a given data type, the structure is unable to hold a value of different type.
 
-![Figure 2-1 Common Data Types](https://github.com/maryoohhh/CS131/blob/master/Figure2-1.png)
+![Figure 2-1 Common Data Types](https://github.com/maryoohhh/CS131/blob/master/Images/Figure2-1.png)
 
 *Figure 2-1: Common Data Types*
 
@@ -168,7 +168,7 @@ Each value within the array is stored inside an *element* of the array. Elements
 
 `string[] island = new string [] {"Hawaii", "Maui", "Oahu", "Kauai", "Molokai", "Lanai", "Niihau", "Kahoolawe"};`
 
-![Figure 2-2 Array address, indexes, and elements](https://github.com/maryoohhh/CS131/blob/master/Figure2-2.png)
+![Figure 2-2 Array address, indexes, and elements](https://github.com/maryoohhh/CS131/blob/master/Images/Figure2-2.png)
 
 *Figure 2-2: Array address, indexes, and elements*
 
@@ -241,7 +241,7 @@ Each array instance exposes a `Length` property to obtain the number of elements
 
  **Multidimensional Arrays**
 
-![Figure 2-3: Multidimensional array](https://github.com/maryoohhh/CS131/blob/master/Figure2-3.png)
+![Figure 2-3: Multidimensional array](https://github.com/maryoohhh/CS131/blob/master/Images/Figure2-3.png)
 
 *Figure 2-3: Multidimensional array*
 
