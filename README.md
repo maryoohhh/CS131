@@ -34,17 +34,17 @@ _____________________________________________________
     <dd>not included in the executable applications</dd>
     <dt> Single-line comments</dt>
     <dd>preceded by two forward slashes</dd>
-    <dd>`// Comments about the code structure go here`</dd>
+    `// Comments about the code structure go here`
     <dt>Multiple-line comments</dt>
     <dd>begins with /* and end with */</dd>
     <dd>maybe used for narrative paragraphs</dd>
-    <dd>`/* Information about the code structure belongs here */`</dd>
+    `/* Information about the code structure belongs here */`
     <dt>XML tag comments</dt>
     <dd>precede by triple forward slashes</dd>
     <dd>enables auto-generation of HTML documentation that is enabled in VS</dd>
     <dd>enable tooltip hnts for describing code blocks</dd>
     <dd>9 main comment tags: remarks, summary, example, exception, param, permission, returns, seealso, and include</dd>
-    <dd>` /// < summary >`</dd>
+    `/// <summary>`
     <dt>Syntax</dt>
     <dd>set of rules for structural correctness of a programming language</dd>
     <dt>Indentation</dt>
