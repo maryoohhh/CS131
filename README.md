@@ -74,7 +74,8 @@ ____________________________________________________________
 This means that once a data structure s defined with a given data type, the structure is unable to hold a value of different type.
 
 ![Figure 2-1 Common Data Types](https://github.com/maryoohhh/CS131/blob/master/Figure2-1.png)
-Figure 2-1 Common Data Types
+
+Figure 2-1: Common Data Types
 
 **Numeric Lieterals**
 
@@ -157,3 +158,86 @@ float distance = -67.7f;
 double distanceInMiles = distance; // Convers to -67.6999969482422
 ```
 
+**Arrays**
+
+Arrays store multiple values of the same data type.
+
+**Array Syntax**
+
+Each value within the array is stored inside an *element* of the array. Elements of the array are referenced sequentially with an *index*.
+
+`string[] island = new string [] {"Hawaii", "Maui", "Oahu", "Kauai", "Molokai", "Lanai", "Niihau", "Kahoolawe"};`
+
+![Figure 2-2 Array address, indexes, and elements](https://github.com/maryoohhh/CS131/blob/master/Figure2-2.png)
+
+Figure 2-2: Array address, indexes, and elements
+
+Three common ways to declare arrays are to state
+* Type, name, and array size together
+
+```
+string[] name = new string[3];
+name[0] = "Hawaii"; // first element referenced at index '0'
+name[1] = "Maui"; // second element referenced at index '1'
+name[2] = "Oahu"; // third element referenced at index '2'
+```
+
+* Type and name first and then size allocation later
+
+```
+string[] name;
+    name = new string[3];
+name[0] = "Hawaii"; // first element referenced at index '0'
+name[1] = "Maui"; // second element referenced at index '1'
+name[2] = "Oahu"; // third element referenced at index '2'
+```
+
+* Type, name, and size inferred while initializing element values when the aray is declared
+
+`string[] island = new string [] {"Hawaii", "Maui", "Oahu", "Kauai", "Molokai", "Lanai", "Niihau", "Kahoolawe"};`
+
+**Array Length**
+
+Each array instance exposes a `Length` property to obtain the number of elements in the array.
+
+ ```
+ using System;
+
+ namespace Starter {
+     class Program {
+         public static void Main() {
+             string[] island = new string [] {"Hawaii", "Maui", "Oahu", "Kauai", "Molokai", "Lanai", "Niihau", "Kahoolawe"};
+             Console.Write("The total main Islands of Hawaii is ");
+             Console.WriteLine(island.Length);
+             Console.ReadLine();
+         }
+     }
+ }
+ ```
+
+ **Sorting Arrays**
+
+ Single-dimensional arrays can be sorted with the `Sort()` method:
+
+ `void Sort(arrayType[] array);
+
+ Example
+
+  ```
+ using System;
+
+ namespace Starter {
+     class Program {
+         public static void Main() {
+             string[] surfDestinations = new string [] {"Ehukai Beach Park", "Laniakea", "Backyards", "Hookipa", "Honolua"};
+             Array.Sort(surfDestinations);
+             Console.Write("Top 5 Hawaiian surf destinations in alphabetical order: ");
+             Console.WriteLine(surfDestinations[0] + ", " + surfDestinations[1] + ", " + surfDestinations[2] + ", " + surfDestinations[3] + ", " + surfDestinations[4] + ".");
+             Console.ReadLine();
+         }
+     }
+ }
+ ```
+
+ **Multidimensional Arrays**
+ 
