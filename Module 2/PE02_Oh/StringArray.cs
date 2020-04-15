@@ -2,7 +2,7 @@
 
 namespace StringArray
 {
-    class Program
+    class StringArray
     {
         static void Main(string[] args)
         {
