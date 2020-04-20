@@ -1,7 +1,7 @@
 # CS131: C#
 
-## Chapter 1: Introduction to C# Coding and Debugging
-_____________________________________________________
+Chapter 1: Introduction to C# Coding and Debugging
+---------------------------------------------------
 
 **Brief History**
 
@@ -52,8 +52,8 @@ _____________________________________________________
     <dd>for readability and by convection, it is essential to indent and left-align the code within each pair of curly braces, including structures inside structures</dd>
 </dl>
 
-## Chapter 2: Variables, Constants, Arrays, and Enumerations
-____________________________________________________________
+Chapter 2: Variables, Constants, Arrays, and Enumerations
+----------------------------------------------------------
 
 <dl>
     <dt>Variables</dt>
@@ -305,3 +305,24 @@ string name = enumerator.ToString();
 Once the enumerator names are stored in a string array, you can obtain their count by checking the `Lenght` property of the array:
 
 `int totalPlanet = planetNames.Length;`
+
+Chapter 3: Numeric Operators and Routines
+------------------------------------------
+
+**Basic Calculations**
+
+    | Function
+--- | --------
+`+` | addition
+`+=` | compound operator, reassigns a variable on the left with its starting value plus the right operand value
+`-` | subtraction
+`-=` | reassigns a variable with its staring value minus the right operand
+`*` | multiplication
+`*=` | reassigns the variable on the left with its original valu multiplied by the right operand
+`/` | division
+`/=` | reassigns a variable at the left with its starting value divided by the right operand
+`%` | used to calculate the remainder during division
+`%=` | implement a self-assignment
+`Math.Pow(base, exponent)` | exponential
+`Math.Sqrt()` | square root
+
