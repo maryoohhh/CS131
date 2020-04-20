@@ -309,8 +309,6 @@ Once the enumerator names are stored in a string array, you can obtain their cou
 Chapter 3: Numeric Operators and Routines
 ------------------------------------------
 
-**Basic Calculations**
-
 Operator | Function
 --- | --------
 `+` | addition
