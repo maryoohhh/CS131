@@ -311,7 +311,7 @@ Chapter 3: Numeric Operators and Routines
 
 **Basic Calculations**
 
-    | Function
+Operator | Function
 --- | --------
 `+` | addition
 `+=` | compound operator, reassigns a variable on the left with its starting value plus the right operand value
