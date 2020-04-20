@@ -325,4 +325,6 @@ Operator | Function
 `%=` | implement a self-assignment
 `Math.Pow(base, exponent)` | exponential
 `Math.Sqrt()` | square root
-
+`++` | increment - pre-increment by placing operator before variable; post-increment by placing operator after variable
+`--` | decrement - pre-decrement by placing operator before variable; post-decrement by placing operator after variable
+`Random()` | randomization
