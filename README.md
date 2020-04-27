@@ -326,3 +326,96 @@ Operator | Function
 `++` | increment - pre-increment by placing operator before variable; post-increment by placing operator after variable
 `--` | decrement - pre-decrement by placing operator before variable; post-decrement by placing operator after variable
 `Random()` | randomization
+
+Chapter 4: Methods and Scope
+----------------------------
+
+**Methods** group instructions that are related by their function. **Methods** also enable code reuse and prevent code duplication since each method can be executed as many times as needed.
+
+**Method Syntax**
+* **Header** - also known as a method signature, is the first line of a method. It contains, at a minimum, the name of the method, a return type, and a parameter list
+
+* **Name** - PascalCase, usually verb or word combination that describes its funcion
+
+* **Return value** - uses the keyword `return` followed by a reference to the data terminates the method's execution and passes the data back to the calling instructions
+
+* **Retun type** - declares the data type of the value returned by the method to the calling instructions
+
+* **Void type** - if method does not return data, the method retur type is assigned the `void` type
+
+* **Parameters** - variables declared inside the method header. When one or more method parameters exist, the calling instruction must either pass variable values or pass references to the method in the same sequence as their devclaration in the method header. Values that are passed to parameter declarations in the header are called **arguments**
+
+* **Static modifier** - staitc methods can only call other static methods without an object reference
+
+![Figure 4-1: Method structures](https://github.com/maryoohhh/CS131/blob/master/Images/Figure4-1.png)
+
+*Figure 4-1: Method structures*
+
+**Calling a Method**
+
+> To call a method, you must type the method name and include rhe required arguments within parenthesis
+
+```
+using System;
+
+namespace ConsoleApplication1 {
+    class Program {
+        // Console applications always start in the Main() method
+        static void Main() {
+            const float MILEAGE = 98.0f;
+            float kilometers = ConvertToKM(MILEAGE); // calling instruction
+
+            ShowDistance(MILEAGE, kilometers); // calling instruction
+            Console.ReadLine();
+        }
+
+        // Display the mile to km conversion in a reader friendly format
+        static float ConvertToKM(float miles) {
+            const float KM_PER_MILE = 1.60934f;
+            retunr miles * KM_PER_MILE; // retunrs a float
+        }
+
+        // Convert miles to km and show the result
+        static void (float miles, float km) {
+            Console.WriteLine(miles + " miles = " + km + " km.");
+        }
+    }
+}
+```
+
+**Methods Overloads**
+
+Methods overloading allows to create methods with identical names as long as each method has a unique arrangement of parameter types. Overloading can make your code more reader friendly when these methods perform similar routine.
+
+```
+using System;
+
+namespace ConsoleApplication1 {
+    class Program {
+        static void Main() {
+            // call overload with no fax
+            DisplayContact("Banana Republic Women", "735 State St", "Santa Barbara", "CA", "93101");
+            Console.WriteLine();
+
+            // call overlaod with fax
+            DisplayContact("Legal Aid Society", "1233 W 6th St", "Cleveland", "OH", "44113", "216-586-3220");
+            Console.ReadLine();
+        }
+
+        // overload with no fax
+        static void DisplayContact(string orgName, string street, string city, string state, string zip) {
+            Console.WriteLine(orgName);
+            Console.WriteLine(street);
+            Console.WriteLine(city + ", " + state);
+            Console.WriteLine(zip);
+        }
+
+        // overload with fax
+        static void DisplayContact(string orgName, string street, string city, string state, string zip, string fax) {
+            // use DisplayContact() overload with no fax
+            DisplayContace(orgName, street, city, state, zip);
+            Console.WriteLine("fax: " + fax); // show fax
+        }
+    }
+}
+```
