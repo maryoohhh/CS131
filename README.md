@@ -345,7 +345,7 @@ Chapter 4: Methods and Scope
 
 * **Parameters** - variables declared inside the method header. When one or more method parameters exist, the calling instruction must either pass variable values or pass references to the method in the same sequence as their devclaration in the method header. Values that are passed to parameter declarations in the header are called **arguments**
 
-* **Static modifier** - staitc methods can only call other static methods without an object reference
+* **Static modifier** - static methods can only call other static methods without an object reference
 
 ![Figure 4-1: Method structures](https://github.com/maryoohhh/CS131/blob/master/Images/Figure4-1.png)
 
@@ -413,9 +413,133 @@ namespace ConsoleApplication1 {
         // overload with fax
         static void DisplayContact(string orgName, string street, string city, string state, string zip, string fax) {
             // use DisplayContact() overload with no fax
-            DisplayContace(orgName, street, city, state, zip);
+            DisplayContact(orgName, street, city, state, zip);
             Console.WriteLine("fax: " + fax); // show fax
         }
     }
 }
 ```
+
+**Passing arguments by value and by reference**
+
+>Arguments can be passed to methods in two ways: by value ot by reference
+
+**Passing by value**
+
+When the parameter is passed to a method by value, a copy of the variable is made and any changes to the argument in the method have no effect on the original value in the calling instructions.
+
+**Passing by reference**
+
+When passing arguments by reference to a method, starting address for the data value is given to the method. Any changes made inside the method to the values referenced by this object are also applied to the object's values outsode the method. Variables with complex data types such as arrays or instances of a class are passed by reference.
+
+```
+using System;
+
+namespace ConsoleApplication1 {
+    class Program {
+
+        const int FIRST_PRICE = 0;
+
+        static void Main() {
+            decimal[] prices = {9.99m};
+            ShowPrices(prices);
+            AddTax(prices[FIRST_PRICE]); // pass by value
+            ShowPrices(prices); // pass by reference
+            Inflate(prices); // pass by reference
+            ShowPrices(prices); // pass by reference
+
+            Console.ReadLine();
+        }
+
+        // receives argument by reference
+        static void ShowPrices(decimal[] price) {
+            Console.WriteLine("Value in calling method: " + price[FIRST_PRICE].ToString("C"));
+        }
+
+        // receives argument by value
+        static void AddTax(decimal price) {
+            const decimal TAX_RATE = 1.07m;
+            price *= TAX_RATE;
+            Console.WriteLine("After tax: " + price.ToString("C"));
+        }
+
+        // receives argument by reference
+        static void ShowPrices(decimal[] price) {
+            const decimal INFLATION_RATE = 1.01m;
+            prices[FIRST_PRICE] *= INFLATION_RATE;
+            Console.WriteLine("After inflation: " + price[FIRST_PRICE].ToString("C"));
+        }
+    }
+}
+```
+
+**Passing arguments explicitly by reference**
+
+A `ref` keyword is required before each argument that is explicitly passed by reference
+
+```
+using System;
+
+namespace ConsoleApplication1 {
+    class Program {
+        static void Main() {
+            float house = 200000.0f;
+            float salary = 75000.0f;
+            
+            // explicitly pass variables by reference
+            AdjustForInflation(ref house, ref salary);
+            Console.WriteLine("**Values After Inflation Adjustment**");
+            Console.WriteLine("Home: " + house);
+            Console.WriteLine("Income: " + salary);
+            Console.ReadLine();
+        }
+
+        // receive arguments explicitly by reference
+        static void AdjustForInflation(ref float home, ref float income) {
+            const float RATE = 1.03f;
+            home *= RATE;
+            income *= RATE;
+        }
+    }
+}
+```
+
+**Passing uninitialized variable by reference**
+
+When `out` keyword is included in a parameter declaration, an uninitialized variable can be passed to the method by reference
+
+```
+using System;
+
+namespace ConsoleApplication1 {
+    class Program {
+        static void Main() {
+            const double TOTAL_YEARS = 5;
+            double accrualRate;
+            
+            // pass uninitialized rate explicitly by reference
+            GetAccrualRate(out accrualRate, TOTAL_YEARS);
+            Console.WriteLine("Accrual rate: " + accrualRate);
+            Console.ReadLine();
+        }
+
+        // receive uninitialized interest rate explicitly by reference
+        static void GetAccrualRate(out double interest, double years) {
+            const double INTEREST_RATE = 1.05;
+            interest = Math.Pow(INTEREST_RATE, years);
+        }
+    }
+}
+```
+
+**Scope** - describes the region of the code where the variable can be accessed
+
+**Class Scope** - defines the accessibility for variables and objects declared at the class level. Class-level declarations are convenient if several methods within the class must reference the item. However, class-level scope is more error prone than localized scope since class-level items can be modified anywhere in the class for as long as the class instance exists
+
+**Method Scope** - variables and objects that are declared inside a method are accessible for edits and reads only within the method. Method-level items exist from the point they are declared in the method to the time the method exits.
+
+**Block Scope** - even more refined level of scope than method scope. refers to the accessibility of a variable or object that is declared inside a conditional structure or loop
+
+**Variable Precedence**
+
+>Local variable always take precedence. As a result, whenever you reference a variable name that exists both locally and the class level, the locally declared variable is used.
