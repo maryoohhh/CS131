@@ -556,7 +556,7 @@ greater than | >
 less than or equal | <=
 greater than or equal | >=
 logical AND | &&
-logical OR | `||`
+logical OR | "||"
 
 **Conditional Structures**
 
