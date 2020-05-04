@@ -543,3 +543,45 @@ namespace ConsoleApplication1 {
 **Variable Precedence**
 
 >Local variable always take precedence. As a result, whenever you reference a variable name that exists both locally and the class level, the locally declared variable is used.
+
+Chapter 5: Conditional Structures and Loops
+--------------------------------------------
+
+Operator | Operation
+--------- | --------
+equals | ==
+not equals | !=
+less than | <
+greater than | >
+less than or equal | <=
+greater than or equal | >=
+logical AND | &&
+logical OR | ||
+
+**Conditional Structures**
+
+**If-else** - a series of conditional expressions that are grouped together
+
+`if` - contains the first conditional expression within the if-else statement
+
+`else if` - optional and must follow the opening `if` statement
+
+`else` - default selsction when no previous condition in the `if-else` series is true
+
+**Ternary operators** - conditional operators that can be used to return different values based on the outcome of a simple conditional expression
+
+**Switches** - conditional structure that provides a selection of `case` values to determine which code block to execute
+
+**Loops**
+
+* `for` loops - starts with a header which contains three instructions (initial value for a counter, conditional expression that is evaluated for every iteration, modifies the counter variable)
+
+* `while` loops - repreats instructions in its block as long as specific condition is true
+
+* `do while` loops - similar to `while` loops, however the `do while` loop is always executed at least once, because the conditional expression is evaluated at the end
+
+* `foreach` loop - allows to iterate through a collection of a similarly typed objects (a declaration within the header creates a temporary variable to store an item from the collection, the temporary variable is followed by the keyword `in` and the collection reference)
+
+`break` statements - force the program to exit the current loop when they are encountered
+
+`continue` statemtent - allows you to bypass all remaining instructions in a loop block to return to the top of the loop
