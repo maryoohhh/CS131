@@ -53,21 +53,21 @@ namespace GoOrQuit
                 // Loop to check if user input is within range
                 if (0 <= percentageGrade && percentageGrade <= 100)
                 {
-                    // First warning: student is in excellent standing
+                    // Condition to check if student is in excellent standing
                     if (90 <= percentageGrade && percentageGrade <= 100)
                     {
                         Console.WriteLine("Student passed the class in excellent standing.");
                         break;
                     }
 
-                    // Second warning: student is in good standing
+                    // Condition to check if student is in good standing
                     else if (78 <= percentageGrade && percentageGrade < 90)
                     {
                         Console.WriteLine("Student passed the class in good standing.");
                         break;
                     }
 
-                    // Third warning: student is borderline pass
+                    // Condition to check if student is borderline pass
                     else if (70 <= percentageGrade && percentageGrade < 78)
                     {
                         Console.WriteLine("Student passed the class, but needs to work harder next time.");
